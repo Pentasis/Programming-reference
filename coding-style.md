@@ -7,8 +7,11 @@ Always 2 spaces.
 ## Line length
 79 chars.
 
+## Paragraphs
+Use 1 line white-space to group logical sections in a block. Declare variables at the top.
+
 ## Wrapping
-Always after an operator or comma.
+Always after a comma or before an operator.
 Either add 1 more space indentation or line-up code.
 
 ## Spaces
@@ -25,6 +28,10 @@ Close on newline.
 x =  {
     y
 }
+
+## Quotes strings
+Use single quotes whenever possible.
+HTML attributes take double quotes, hence the reason (for me at least) to use single quotes in code.
 
 ## Comments
 All comments provide context.
@@ -51,7 +58,7 @@ Always 72 char long.
 - Don't use abbreviations or acronyms unless very, very common.
 - Only use standard ASCII chars
 - Always in english
-- Don't use i, j, k, etc. be descriptive at all times!
+- Don't use i, j, k, etc. be descriptive at all times! (use array_index, loop_counter, x_key, x_value, etc.)
 - unused vaiables may be named _
 - Avoid words with double meaning. E.g. 'number' may refer to 'number of' (use amount or count instead) or 'the number' (use e.g. index instead or be more specific like house_number).
 - Put aggregations (e.g. count or amount) at the end of a name. Use only standard abbreviations min, max, avg
@@ -112,20 +119,3 @@ Projects
 ----* .gitignore
 
 *) are placed under version control, the rest is not.
-
-## Returns
-I'm not a "there can only be one return" purist. Multiple exit-points from a function can be preferred (e.g. using a Guard). However, I do tend to try to return at the end as much as possible. (avoiding spagetti code).
-
-## Anonymous functions (lambda's)
-Avoid them. Only use them if the function is not used anywhere else and it does not contain more than 3 lines of code max.
-
-## One function
-Every function, method, class, module and file should do one thing or contain logical grouped code.
-Better to have multiple small functions than one big function.
-
-### Grouping caveats
-Group logic based on readability over function.
-
-## Magic numbers
-Never use literals if a constant or option/setting can do.
-Parameterize as much as possible.
